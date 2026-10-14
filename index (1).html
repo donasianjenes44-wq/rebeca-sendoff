@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mwaliko wa Sendoff - Rebeca Daudi</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf5e6; --cream2:#f3e8cc; --brown:#5a2a1c; --gold:#c9a24b; --gold2:#e6c878; --ink:#3b2a22;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0}
+  body{
+    background:#e9dfc8; font-family:'Cormorant Garamond',Georgia,serif; color:var(--ink);
+    display:flex; justify-content:center; padding:16px;
+  }
+  .card{
+    position:relative; width:100%; max-width:520px; text-align:center;
+    background:radial-gradient(ellipse at top,#fffaf0 0%,var(--cream) 55%,var(--cream2) 100%);
+    padding:48px 34px 36px; border:3px solid var(--gold); outline:1px solid var(--gold2); outline-offset:-12px;
+    box-shadow:0 8px 30px rgba(90,42,28,.25);
+  }
+  .card::before,.card::after{content:"❀";position:absolute;font-size:46px;color:#f6efe0;text-shadow:0 0 0 #fff,0 1px 3px rgba(90,42,28,.35)}
+  .card::before{top:6px;left:10px} .card::after{top:6px;right:10px}
+  .flower-b{position:absolute;bottom:6px;font-size:46px;color:#f6efe0;text-shadow:0 1px 3px rgba(90,42,28,.35)}
+  .flower-b.l{left:10px} .flower-b.r{right:10px}
+
+  .title{font-family:'Great Vibes',cursive;font-size:clamp(40px,11vw,58px);color:var(--brown);margin:6px 0 14px;line-height:1.1}
+  .small{font-size:18px;margin:4px 0}
+  .parents{font-size:21px;font-weight:700;color:var(--brown);margin:8px 0 2px}
+  .italic{font-style:italic;font-size:16px}
+  .name{font-family:'Great Vibes',cursive;font-size:clamp(64px,19vw,100px);line-height:.95;color:var(--brown);margin:14px 0 22px}
+
+  .guest{display:flex;align-items:baseline;justify-content:center;gap:8px;margin:18px 0 10px;font-size:18px;flex-wrap:wrap}
+  .guest label{white-space:nowrap}
+  #guestName{
+    font-family:inherit;font-size:20px;font-weight:600;color:var(--brown);text-align:center;
+    border:0;border-bottom:1.5px dotted var(--brown);background:transparent;min-width:200px;max-width:100%;padding:2px 6px;outline:none;
+  }
+  #guestName:focus{border-bottom-style:solid;background:rgba(201,162,75,.12)}
+  #guestName::placeholder{color:#9b8576;font-weight:400}
+
+  .divider{display:flex;align-items:center;gap:10px;justify-content:center;margin:14px auto;width:60%}
+  .divider i{flex:1;height:1px;background:var(--brown)} .divider b{width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
+  .date{font-size:clamp(22px,6.2vw,30px);font-weight:700;letter-spacing:.06em;color:var(--brown);margin:8px 0 18px}
+
+  .venues{display:grid;grid-template-columns:1fr 1px 1fr;gap:12px;text-align:center;margin-bottom:16px}
+  .venues .sep{background:#c9b99a}
+  .venues h3{margin:0;font-size:25px;color:var(--brown)}
+  .venues .t{font-weight:700;font-size:18px;margin:4px 0 10px}
+  .venues p{margin:0;font-size:16px;line-height:1.35}
+
+  .verse{font-style:italic;font-size:15.5px;margin:18px 0 14px;line-height:1.4}
+  .dress{font-weight:700;font-size:20px;color:var(--brown);margin-bottom:10px}
+  .swatches{display:flex;justify-content:center;gap:12px}
+  .swatches span{width:42px;height:42px;border-radius:50%;border:2px solid var(--gold);display:block}
+
+  .tools{max-width:520px;width:100%;margin:14px auto 0;text-align:center;font:14px system-ui,sans-serif;color:#6b5a4c}
+  .tools button{font:inherit;background:var(--brown);color:#fff;border:0;border-radius:6px;padding:9px 16px;cursor:pointer;margin:4px}
+  .tools button:focus-visible,#guestName:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+  @media (max-width:420px){.card{padding:44px 20px 34px}.venues p{font-size:14.5px}}
+  @media print{body{background:#fff;padding:0}.tools{display:none}.card{box-shadow:none}}
+</style>
+</head>
+<body>
+<div style="width:100%;max-width:520px">
+  <main class="card">
+    <h1 class="title">Mwaliko wa Sendoff</h1>
+
+    <p class="small">Familia ya</p>
+    <p class="parents">Bw &amp; Bi Aron Daudi Munyali</p>
+    <p class="small">wa Iyunga, Ikuti – Mbeya</p>
+    <p class="italic">wanafuraha kukualika katika sherehe ya Sendoff<br>ya binti yao mpendwa</p>
+
+    <div class="name">Rebeca<br>Daudi</div>
+
+    <div class="guest">
+      <label for="guestName">Mpendwa / Wapendwa:</label>
+      <input id="guestName" type="text" placeholder="Andika jina hapa" autocomplete="off" maxlength="60">
+    </div>
+
+    <div class="divider"><i></i><b></b><i></i></div>
+    <div class="date">JUMAMOSI 17 OKTOBA 2026</div>
+
+    <section class="venues">
+      <div>
+        <h3>Nyumbani</h3>
+        <div class="t">Saa 6:00 mchana</div>
+        <p>Nyumbani kwa Familia<br>Iyunga, Ikuti – Mbeya</p>
+      </div>
+      <div class="sep"></div>
+      <div>
+        <h3>Ukumbini</h3>
+        <div class="t">Saa 12:30 jioni</div>
+        <p>Ukumbi wa Tumanyene<br>Nzovwe</p>
+      </div>
+    </section>
+
+    <p class="verse">Mwanzo 24:58 — “Wakamwita Rebeka, wakamwuliza je utakwenda na mtu huyu? Akasema nitakwenda.”</p>
+
+    <div class="dress">Mavazi (Dress code)</div>
+    <div class="swatches" aria-label="Rangi za mavazi">
+      <span style="background:#2b1810"></span>
+      <span style="background:#6b3a26"></span>
+      <span style="background:#b85a1a"></span>
+      <span style="background:#e8892b"></span>
+      <span style="background:#fffaf0"></span>
+    </div>
+    <span class="flower-b l">❀</span><span class="flower-b r">❀</span>
+  </main>
+
+  <div class="tools">
+    <div>Andika jina juu, kisha bonyeza kitufe kutengeneza link ya kumtumia mgeni.</div>
+    <button id="copyBtn" type="button">Nakili link yenye jina</button>
+    <button id="shareBtn" type="button">Tuma WhatsApp</button>
+  </div>
+</div>
+
+<script>
+  const input = document.getElementById('guestName');
+  const params = new URLSearchParams(location.search);
+
+  // Jina likiwa kwenye link, mfano: ?jina=Mama%20Neema
+  const fromLink = params.get('jina');
+  if (fromLink) input.value = fromLink;
+
+  function personalLink(){
+    const url = new URL(location.href.split('?')[0]);
+    if (input.value.trim()) url.searchParams.set('jina', input.value.trim());
+    return url.toString();
+  }
+
+  document.getElementById('copyBtn').addEventListener('click', async () => {
+    const link = personalLink();
+    try { await navigator.clipboard.writeText(link); alert('Link imenakiliwa:\n' + link); }
+    catch(e){ prompt('Nakili link hii:', link); }
+  });
+
+  document.getElementById('shareBtn').addEventListener('click', () => {
+    const msg = 'Karibu kwenye Sendoff ya Rebeca Daudi, Jumamosi 17 Oktoba 2026.\n' + personalLink();
+    window.open('https://wa.me/?text=' + encodeURIComponent(msg), '_blank');
+  });
+</script>
+</body>
+</html>
